@@ -13,24 +13,189 @@
         crossorigin='anonymous' />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Spotify</title>
 </head>
 
 <body>
     <div class="box flex">
-        <nav class="left-sidebar">
+        <!-- Sidebar -->
+        <nav class="left-sidebar flex column">
+            <!-- Top-sidebar -->
+            <div class="top">
+                <ul>
+                    <li>
+                        <img id="small-logo" src="img/logo-small.svg" alt="small-logo">
+                        <!-- <a href="">Spotify</a> -->
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-house"></i>
+                        <!-- <a href="#">Home</a> -->
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <!-- <a href="#">Cerca</a> -->
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-sliders"></i>
+                        <!-- <a href="#">La tua libreria</a> -->
+                    </li>
+                </ul>
+            </div>
+            <!-- Bottom-sidebar -->
+            <div class="bottom">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-circle-arrow-down"></i>
+                        <!-- <a href="#"Installa app</a> -->
 
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-user"></i>
+                        <!-- <a href="#"Nome Cognome</a> -->
+                    </li>
+                </ul>
+            </div>
         </nav>
-        <div class="right flex column">
-            <header></header>
-            <main>
 
+        <!-- Right-Content -->
+        <div class="right-content flex column">
+
+            <!-- *Header -->
+            <header class="flex">
+                <h4 class="upgrade btn">Effettua l'upgrade</h4>
+            </header>
+
+            <!-- !Main -->
+            <main>
+                <div class="container">
+
+                    <!-- !Top nav-bar -->
+                    <div class="row-nav">
+                        <ul class="flex">
+                            <li>
+                                <a href="#">In Evidenza</a>
+                            </li>
+                            <li>
+                                <a href="#">Podcast</a>
+                            </li>
+                            <li>
+                                <a href="#">Classifiche</a>
+                            </li>
+                            <li>
+                                <a href="#">Generi e Mood</a>
+                            </li>
+                            <li>
+                                <a href="#">Nuove Uscite</a>
+                            </li>
+                            <li>
+                                <a href="#">Scopri</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- !Recently played -->
+                    <h2 class="recently-title">Recently played</h2>
+                    <div class="row-recently-played flex wrap">
+                        <div class="col">
+                            <div class="album-card">
+                                <img class="album-image" src="img/metal_lifting.jpg" alt="metal-image">
+                                <h5 class="title">Heavy Metal</h5>
+                                <h6 class="subtitle">Subtitle</h6>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="album-card">
+                                <img class="album-image" src="img/stranger.jpeg" alt="stragerthings-image">
+                                <h5 class="title">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)
+                                </h5>
+                                <h6 class="subtitle">Kyle Dixon & Michael Stein</h6>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="album-card">
+                                <img class="album-image" src="img/aquietplace.jpeg" alt="quietplace-image">
+                                <h5 class="title">A quiet place</h5>
+                                <h6 class="subtitle">Subtitle</h6>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="album-card">
+                                <img class="album-image" src="img/split.jpeg" alt="split-image">
+                                <h5 class="title">Split</h5>
+                                <h6 class="subtitle">Subtitle</h6>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="album-card">
+                                <img class="album-image" src="img/cure.jpeg" alt="cure-image">
+                                <h5 class="title">A cure for wellness</h5>
+                                <h6 class="subtitle">Subtitle</h6>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="album-card">
+                                <img class="album-image" src="img/sinister.jpeg" alt="sinister-image">
+                                <h5 class="title">Sinister</h5>
+                                <h6 class="subtitle">Subtitle</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- !Recommended content -->
+                    <h2 class="recommended-title">Creato per Gianluca</h2>
+                    <h6 class="recommended-description">Più ascolti, più accurati saranno i suggerimenti.</h6>
+                    <div class="row-recommended flex wrap">
+                        <div class="col">
+                            <div class="album-card">
+                                <img class="album-image" src="img/radar.jpeg" alt="radar-image">
+                                <h5 class="title">Release Radar</h5>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="album-card">
+                                <img class="album-image" src="img/mixdaily.jpeg" alt="mixdaily-image">
+                                <h5 class="title">Daily Mix 1</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- !More popular -->
+                    <h2 class="more-popular-title">Artisti più popolari</h2>
+                    <h6 class="more-popular-description">Più ascolti, più accurati saranno i suggerimenti.</h6>
+                    <div class="row-more-popular flex wrap">
+                        <div class="col">
+                            <div class="album-card">
+                                <img class="popular album-image" src="img/youg.jpeg" alt="lanadelrey-image">
+                                <h5 class="title">Lana Del Rey</h5>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="album-card">
+                                <img class="popular album-image" src="img/einaudi.jpeg" alt="einaudi-image">
+                                <h5 class="title">Ludovico Einuadi</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
     </div>
-    <footer></footer>
+
+    <footer>
+        <!-- <div class="footer-left flex">
+            <div class="now-playing flex">
+                <img class="now-playing-image" src="img/youg.jpeg" alt="lanadelrey-image">
+                <h5>Lana Del Rey</h5>
+                <h6>Young and Beautiful</h6>
+            </div>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+            <a href="#"></a>
+        </div>
+        <div class="footer-center"></div>
+        <div class="footer-right"></div> -->
+    </footer>
 </body>
 
 </html>
