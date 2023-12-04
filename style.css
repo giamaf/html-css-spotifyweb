@@ -4,5 +4,50 @@ body {
     Padding: 0;
     Box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    ;
+}
+
+/* Generics */
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+
+/* Main */
+.sidebar {
+    background-color: black;
+    border: 1px dashed white;
+    height: 100vh;
+    width: 60px;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 70px;
+    border: 1px solid red;
+    flex-shrink: 0;
+}
+
+main {
+    flex-grow: 1;
+    background-color: rgb(21, 25, 33);
+    border: 1px solid yellow;
+    overflow: auto;
+}
+
+footer {
+    background-color: rgb(40, 40, 40);
+    height: 70px;
+    border: 1px dashed white;
+    flex-shrink: 0;
 }
