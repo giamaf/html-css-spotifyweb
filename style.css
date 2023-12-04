@@ -1,0 +1,8 @@
+/* CSS Reset */
+body {
+    Margin: 0;
+    Padding: 0;
+    Box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    ;
+}
