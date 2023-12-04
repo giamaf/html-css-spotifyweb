@@ -17,13 +17,28 @@ body {
     flex-direction: column;
 }
 
+ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+img {
+    max-width: 100%;
+}
 
 /* Main */
-.sidebar {
+.box {
+    height: 90vh;
+}
+
+.left-sidebar {
     background-color: black;
     border: 1px dashed white;
-    height: 100vh;
-    width: 60px;
+    width: 50px;
+}
+
+.right {
+    width: 100%;
 }
 
 .wrapper {
@@ -39,15 +54,15 @@ header {
 }
 
 main {
-    flex-grow: 1;
-    background-color: rgb(21, 25, 33);
     border: 1px solid yellow;
+    color: white;
+    background-color: rgb(21, 25, 33);
+    flex-grow: 1;
     overflow: auto;
+    padding: 10px;
 }
 
 footer {
     background-color: rgb(40, 40, 40);
-    height: 70px;
-    border: 1px dashed white;
-    flex-shrink: 0;
+    height: 10vh;
 }
