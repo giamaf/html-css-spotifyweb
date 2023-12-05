@@ -89,6 +89,10 @@
         flex-basis: 25%;
     }
 
+    .footer-left {
+        gap: 20px;
+    }
+
     .footer-left .like-download {
         display: flex;
         gap: 10px;

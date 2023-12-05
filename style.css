@@ -47,7 +47,6 @@ h6 {
 
 img {
     max-width: 100%;
-    opacity: 10%;
 }
 
 .left-sidebar .fa-solid,
@@ -76,13 +75,16 @@ img {
     color: gray;
 }
 
-.album-card {
-    text-align: center;
+.album-image {
+    display: block;
+}
+
+.cover-container {
     position: relative;
 }
 
-.card-play {
-    position: absolute;
+.cover-container-radius {
+    position: relative;
 }
 
 /* Sidebar */
@@ -167,7 +169,7 @@ header {
 .upgrade {
     font-size: 0.7rem;
     text-transform: uppercase;
-    width: 170px;
+    width: 200px;
     text-align: center;
     font-weight: 600;
     padding: 10px;
@@ -285,7 +287,7 @@ footer {
 .footer-left {
     align-items: center;
     width: 25vh;
-    gap: 20px;
+    gap: 10px;
 }
 
 .now-playing {
@@ -401,4 +403,89 @@ footer {
 #volume-level {
     width: 20%;
     color: white;
+}
+
+/* ?Effects */
+
+/* ??? PLAY CARD IN HOVER ??? */
+.cover-container:hover::after {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-rendering: auto;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+
+    font: var(--fa-font-regular);
+    font-size: 3rem;
+    content: "\f144";
+    cursor: pointer;
+}
+
+.cover-container-radius:hover::after {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-rendering: auto;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+
+    font: var(--fa-font-regular);
+    font-size: 3rem;
+    content: "\f144";
+    cursor: pointer;
+}
+
+/* ??? EFFETTUA L'UPGRADE HOVER ??? */
+:hover.upgrade.btn {
+    box-shadow: 0 1px 3px;
+    width: 205px;
+    cursor: pointer;
+}
+
+/* ??? SIDE-BAR HOVER ??? */
+.left-sidebar ul li:hover i {
+    color: white;
+    cursor: pointer;
+}
+
+.left-sidebar ul li:hover a {
+    color: white;
+}
+
+/* ??? NAV-BAR HOVER ??? */
+.row-nav ul li:hover a {
+    color: white;
+}
+
+/* ??? SONG-TITLE HOVER ??? */
+.now-playing ul li:hover h6 {
+    text-decoration: underline;
+    color: white;
+    /* cursor: pointer; */
+}
+
+/* ??? LIKE-DOWNLOAD HOVER ??? */
+.like-download li:hover a {
+    filter: invert(1);
+}
+
+/* ??? PLAY HOVER ??? */
+:hover.fa-regular.fa-circle-play.fa-lg {
+    font-size: 1.3rem;
 }
