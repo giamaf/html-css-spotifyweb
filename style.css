@@ -1,18 +1,15 @@
 /* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    Margin: 0;
-    Padding: 0;
-    Box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
 /* Generics */
-.container {
-    max-width: 98%;
-    margin: 0 auto;
-    padding: 1rem 0;
-}
-
 .flex {
     display: flex;
     flex-direction: row;
@@ -27,7 +24,9 @@ body {
 }
 
 .box {
-    height: 90vh;
+    height: calc(100vh - 80px);
+    overflow: auto;
+
 }
 
 ul {
@@ -76,56 +75,98 @@ img {
     color: gray;
 }
 
+.album-card {
+    text-align: center;
+}
 
 /* Sidebar */
 .left-sidebar {
     background-color: black;
-    /* border: 1px dashed white; */
     padding: 0.5rem 0;
-    width: 50px;
-    align-items: center;
+    flex-basis: 50px;
+    flex-shrink: 0;
     text-align: center;
     justify-content: space-between;
 }
 
+/* Top-sidebar */
 #small-logo {
     width: 60%;
+}
+
+#big-logo {
+    width: 110px;
+    display: none;
 }
 
 .left-sidebar .top {
     line-height: 30px;
 }
 
-.left-sidebar .bottom {
-    line-height: 30px;
+.left-sidebar .top a {
+    display: none;
+    font-size: 0.7rem;
+    color: grey;
 }
 
-/* Content */
-.right-content {
+/* Playlist content */
+.left-sidebar .playlist {
+    justify-content: flex-start;
+    display: none;
+}
+
+.left-sidebar h2 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    display: inline;
+}
+
+/* Bottom-sidebar */
+.left-sidebar .bottom {
+    line-height: 30px;
+    text-align: center;
     width: 100%;
+}
+
+.left-sidebar .bottom a {
+    display: none;
+    color: grey;
+    font-size: 0.7rem;
+}
+
+.left-sidebar .bottom h2 {
+    text-transform: none;
+    font-size: 0.7rem;
+}
+
+/* Right-Content */
+.right-content {
+    overflow: auto;
 }
 
 /* *Header */
 header {
-    background-color: rgba(9, 11, 18);
-    /* border: 1px solid red; */
+    background-color: rgba(9, 11, 18, 0.95);
     height: 70px;
     flex-shrink: 0;
+    position: sticky;
     justify-content: flex-end;
     align-items: center;
-    padding: 0 5px;
+    padding: 0 0.5rem;
+    top: 0;
 }
 
 .upgrade {
     font-size: 0.7rem;
     text-transform: uppercase;
-    flex-basis: 40%;
+    width: 170px;
     text-align: center;
     font-weight: 600;
     padding: 10px;
     color: white;
 }
-
 
 /* !Main */
 main {
@@ -134,6 +175,7 @@ main {
     background-color: rgb(21, 25, 33);
     flex-grow: 1;
     overflow: auto;
+    padding: 1rem 1rem;
 }
 
 /* !Top nav-bar */
@@ -142,12 +184,12 @@ main {
     text-transform: uppercase;
     font-size: 0.7rem;
     row-gap: 1.2rem;
+    text-align: center;
     justify-content: center;
-    padding: 0 1.2rem;
 }
 
 .row-nav li {
-    flex-basis: calc(100% / 4);
+    flex-basis: 25%;
 }
 
 .row-nav li a {
@@ -170,7 +212,7 @@ main {
 
 .row-recently-played .col {
     padding: 0 0.25rem;
-    flex-basis: calc(50% - 1rem);
+    flex-basis: 50%;
     /* border: 1px solid white; */
 }
 
@@ -179,12 +221,11 @@ main {
 .row-recommended {
     row-gap: 0.5rem;
     margin: 0 -0.25rem;
+    flex-wrap: nowrap;
 }
 
 .row-recommended .col {
     padding: 0 0.25rem;
-    flex-basis: calc(50% - 1rem);
-    /* border: 1px solid white; */
 }
 
 .recommended-title {
@@ -201,11 +242,12 @@ main {
 .row-more-popular {
     row-gap: 0.5rem;
     margin: 0 -0.25rem;
+    flex-wrap: nowrap;
 }
 
 .row-more-popular .col {
     padding: 0 0.25rem;
-    flex-basis: calc(50% - 1rem);
+
     /* border: 1px solid white; */
 }
 
@@ -227,24 +269,17 @@ main {
 /* todo Footer */
 footer {
     background-color: rgb(40, 40, 40);
-    height: calc(10vh - 1rem);
+    height: 80px;
     padding: 0.5rem;
     justify-content: space-between;
-    align-items: center;
 }
 
-.footer-left,
-.footer-center,
-.footer-right {
-    flex-basis: calc(100% / 3);
-    align-items: center;
-}
 
 /* todo Footer top-left */
 .footer-left {
-    justify-content: start;
     align-items: center;
-    gap: 5px;
+    width: 25vh;
+    gap: 20px;
 }
 
 .now-playing {
@@ -280,18 +315,44 @@ footer {
 /* todo Footer center */
 .footer-center {
     justify-content: center;
+    align-items: center;
     row-gap: 15px;
+    width: 50vh;
 }
 
-.player-button {
-    margin: 0;
-    row-gap: 10px;
+.player-button,
+.playing-time {
     gap: 15px;
+    width: 100%;
+    justify-content: center;
 }
 
 .playing-time {
     align-items: center;
     gap: 5px;
+}
+
+.playing-time li:nth-last-of-type(2) {
+    width: 100%;
+}
+
+#time-bar {
+    color: grey;
+    background-color: grey;
+    border: 2px solid;
+    width: 100%;
+    height: 2px;
+    border-radius: 20px;
+}
+
+#time-progress {
+    width: 20%;
+    color: white;
+}
+
+.playing-time h6 {
+    font-size: 0.5rem;
+    padding: 0 0.25rem;
 }
 
 .footer-center,
@@ -302,7 +363,9 @@ footer {
 
 /* todo Footer right */
 .footer-right {
+    align-items: center;
     justify-content: flex-end;
+    width: 25vh;
 }
 
 .footer-right,
@@ -313,19 +376,23 @@ footer {
 .volume-share {
     align-items: center;
     gap: 10px;
+    width: 100%;
 }
 
-.bar {
+.volume-share li:last-of-type {
+    width: 100%;
+}
+
+#volume-bar {
     color: grey;
     background-color: grey;
-    border: 1px solid;
-    width: 100px;
+    border: 2px solid;
+    width: 100%;
     height: 2px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
-.progress {
+#volume-level {
     width: 20%;
-    display: inline-block;
     color: white;
 }

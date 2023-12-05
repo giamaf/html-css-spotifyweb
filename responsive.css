@@ -1,0 +1,89 @@
+/* *****RESPONSIVE SPOTIFY-S > 620PX***** */
+
+@media screen and (min-width: 620px) {
+
+    /* ***Left-sidebar rules** */
+
+    .left-sidebar {
+        flex-basis: 200px;
+        align-items: flex-start;
+        padding: 1rem 1rem 0.5rem 1rem;
+    }
+
+    .row-nav li {
+        flex-basis: calc(100% / 3);
+    }
+
+    #small-logo {
+        display: none;
+    }
+
+    #big-logo {
+        display: block;
+    }
+
+    .left-sidebar .top {
+        text-align: left;
+    }
+
+    .left-sidebar .top ul li {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .left-sidebar .top ul li:first-of-type {
+        margin-bottom: 10px;
+    }
+
+    .left-sidebar .top a {
+        display: inline-block;
+    }
+
+    .left-sidebar .playlist {
+        justify-content: flex-start;
+        display: inline-block;
+    }
+
+    .left-sidebar .bottom {
+        line-height: 30px;
+        text-align: left;
+    }
+
+
+    .left-sidebar .bottom a {
+        display: inline-block;
+    }
+
+    .left-sidebar .bottom ul li {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 0.25rem 0;
+    }
+
+    .left-sidebar .bottom ul li:first-of-type {
+        border-bottom: 1px solid grey;
+    }
+
+}
+
+
+/* *****RESPONSIVE SPOTIFY-MD > 768PX***** */
+
+@media screen and (min-width: 768px) {
+    .row-nav li {
+        flex-basis: calc(100% / 5);
+    }
+
+    .row-recently-played .col {
+        padding: 0 0.25rem;
+        flex-basis: 25%;
+    }
+
+    .footer-left .like-download {
+        display: flex;
+        gap: 10px;
+    }
+
+}
