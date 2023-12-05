@@ -33,19 +33,27 @@ body {
 ul {
     list-style-type: none;
     padding-inline-start: 0;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
 }
 
+h2,
+h5,
+h6 {
+    margin: 0;
+}
+
 img {
     max-width: 100%;
 }
 
-.fa-solid,
-.fa-light {
-    color: lightgray;
+.left-sidebar .fa-solid,
+.fa-light,
+.fa-regular {
+    color: gray;
 }
 
 .btn {
@@ -53,11 +61,27 @@ img {
     border-radius: 20px;
 }
 
+.title,
+.subtitle {
+    text-align: center;
+    margin: 0.25rem 0;
+    padding: 0 0.5rem;
+}
+
+.title {
+    color: white;
+}
+
+.subtitle {
+    color: gray;
+}
+
 
 /* Sidebar */
 .left-sidebar {
     background-color: black;
     /* border: 1px dashed white; */
+    padding: 0.5rem 0;
     width: 50px;
     align-items: center;
     text-align: center;
@@ -135,6 +159,8 @@ main {
 
 .recently-title {
     color: white;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .row-recently-played {
@@ -146,21 +172,6 @@ main {
     padding: 0 0.25rem;
     flex-basis: calc(50% - 1rem);
     /* border: 1px solid white; */
-}
-
-.title,
-.subtitle {
-    text-align: center;
-    margin: 0.25rem 0;
-    padding: 0 0.5rem;
-}
-
-.title {
-    color: white;
-}
-
-.subtitle {
-    color: gray;
 }
 
 
@@ -177,7 +188,7 @@ main {
 }
 
 .recommended-title {
-    margin-bottom: 0;
+    margin-top: 1.5rem;
     color: white;
 }
 
@@ -199,7 +210,7 @@ main {
 }
 
 .more-popular-title {
-    margin-bottom: 0;
+    margin-top: 1.5rem;
     color: white;
 }
 
@@ -213,8 +224,108 @@ main {
 }
 
 
+/* todo Footer */
 footer {
     background-color: rgb(40, 40, 40);
-    height: 10vh;
-    border: 1px solid white;
+    height: calc(10vh - 1rem);
+    padding: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex-basis: calc(100% / 3);
+    align-items: center;
+}
+
+/* todo Footer top-left */
+.footer-left {
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+.now-playing {
+    align-items: center;
+    gap: 5px;
+}
+
+.now-playing ul {
+    width: 60%;
+}
+
+.now-playing li h5 {
+
+    color: white;
+    font-size: 0.6rem;
+}
+
+.now-playing li h6 {
+    margin: 0;
+    color: gray;
+    font-size: 0.5rem;
+}
+
+.now-playing-image {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-left .fa-regular {
+    color: gray;
+}
+
+/* todo Footer center */
+.footer-center {
+    justify-content: center;
+    row-gap: 15px;
+}
+
+.player-button {
+    margin: 0;
+    row-gap: 10px;
+    gap: 15px;
+}
+
+.playing-time {
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-center,
+.fa-solid,
+.fa-regular {
+    color: white;
+}
+
+/* todo Footer right */
+.footer-right {
+    justify-content: flex-end;
+}
+
+.footer-right,
+.fa-solid {
+    color: white;
+}
+
+.volume-share {
+    align-items: center;
+    gap: 10px;
+}
+
+.bar {
+    color: grey;
+    background-color: grey;
+    border: 1px solid;
+    width: 100px;
+    height: 2px;
+    border-radius: 10px;
+}
+
+.progress {
+    width: 20%;
+    display: inline-block;
+    color: white;
 }
