@@ -47,6 +47,7 @@ h6 {
 
 img {
     max-width: 100%;
+    opacity: 10%;
 }
 
 .left-sidebar .fa-solid,
@@ -77,6 +78,11 @@ img {
 
 .album-card {
     text-align: center;
+    position: relative;
+}
+
+.card-play {
+    position: absolute;
 }
 
 /* Sidebar */
