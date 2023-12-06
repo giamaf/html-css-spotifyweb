@@ -6,8 +6,8 @@
 
     .left-sidebar {
         flex-basis: 200px;
-        align-items: flex-start;
         padding: 1rem 1rem 0.5rem 1rem;
+        overflow: hidden;
     }
 
     .row-nav li {
@@ -22,8 +22,13 @@
         display: block;
     }
 
+    .image-sidebar {
+        max-width: 15%;
+    }
+
     .left-sidebar .top {
         text-align: left;
+        overflow: auto;
     }
 
     .left-sidebar .top ul li {
@@ -44,12 +49,6 @@
         justify-content: flex-start;
         display: inline-block;
     }
-
-    .left-sidebar .bottom {
-        line-height: 30px;
-        text-align: left;
-    }
-
 
     .left-sidebar .bottom a {
         display: inline-block;
