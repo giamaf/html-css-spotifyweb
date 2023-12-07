@@ -161,6 +161,7 @@ main .fa-circle-play {
 /* Right-Content */
 .right-content {
     overflow: auto;
+    width: 100vw;
 }
 
 /* *Header */
