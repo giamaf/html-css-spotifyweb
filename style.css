@@ -82,6 +82,8 @@ img {
 
 .album-image {
     display: block;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .cover-container {
@@ -519,6 +521,11 @@ footer {
 .volume-bar:hover .volume-progress,
 .volume-bar:hover .marker.volume {
     display: block;
+    cursor: pointer;
+}
+
+.time-bar,
+.volume-bar:hover {
     cursor: pointer;
 }
 
