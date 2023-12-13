@@ -1,6 +1,6 @@
 # Responsive layout
 
-Web app creata con le <u>sole proprietà CSS</u> partendo dal layout mobile.  😎
+Web app creata con le <b>sole proprietà CSS</b> partendo dal layout mobile.  😎
 
 
 ### Ecco le immagini del lavoro ultimato! 👇🏼
